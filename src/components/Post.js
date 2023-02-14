@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
 
 const Post = () => {
   const { userId } = useParams();
@@ -20,7 +21,7 @@ const Post = () => {
       {isLoading && <p>Loading...</p>}
       {!isLoading && <Link to="/">Back</Link>}
 
-      <h2>{post.title}</h2>
+      <h2>{post.title || <Skeleton />}</h2>
       <p>{post.body}</p>
     </div>
   );

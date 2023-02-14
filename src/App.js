@@ -1,4 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "react-loading-skeleton/dist/skeleton.css";
+
 import Home from "./components/Home";
 import Post from "./components/Post";
 import "./App.css";
