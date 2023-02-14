@@ -22,7 +22,7 @@ const Post = () => {
       {!isLoading && <Link to="/">Back</Link>}
 
       <h2>{post.title || <Skeleton />}</h2>
-      <p>{post.body}</p>
+      <p>{post.body || <Skeleton count={3} />}</p>
     </div>
   );
 };
