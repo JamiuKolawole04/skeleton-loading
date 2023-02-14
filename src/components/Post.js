@@ -18,7 +18,6 @@ const Post = () => {
 
   return (
     <div className="user-post">
-      {isLoading && <p>Loading...</p>}
       {!isLoading && <Link to="/">Back</Link>}
 
       <h2>{post.title || <Skeleton />}</h2>
